@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorDarkBlue"
+    tools:context=".theirProfileActivity">
+
+    <ScrollView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/coverIv"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:scaleType="centerCrop"
+                android:background="@color/colorBlue"></ImageView>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="100dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:background="@drawable/rounded_top_corner"
+                        android:layout_marginTop="60dp"></RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/circle"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="35dp"
+                        android:id="@+id/imrel">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="50dp"
+                            android:background="@color/colorDarkBlue"
+                            android:layout_centerHorizontal="true">
+
+                            <ImageView
+                                android:id="@+id/avatarIv"
+                                android:layout_width="100dp"
+                                android:src="@drawable/ic_add_image"
+                                android:layout_height="100dp"
+                                android:scaleType="centerCrop"></ImageView>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:background="@drawable/rounded_top_corner"></RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerHorizontal="true"
+                        android:paddingLeft="100dp"
+                        android:layout_below="@id/imrel">
+                        <TextView
+                            android:id="@+id/nameTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Name"
+                            android:textSize="25sp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="7dp"
+                            android:textColor="@android:color/white"></TextView>
+                        <TextView
+                            android:id="@+id/emailTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Email"
+                            android:textSize="10sp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="7dp"
+                            android:textColor="@android:color/white"></TextView>
+                        <TextView
+                            android:id="@+id/phoneTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Phone"
+                            android:textSize="10sp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="7dp"
+                            android:textColor="@android:color/white"
+                            ></TextView>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_posts"
+                android:layout_below="@+id/LinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

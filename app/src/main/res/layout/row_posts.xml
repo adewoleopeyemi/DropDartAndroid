@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/RelLayoutPost"
+    android:background="@drawable/rounded_corners">
+
+
+
+
+    <eightbitlab.com.blurview.BlurView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/blurredLayout">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/pThumbNail"
+            android:scaleType="centerCrop"
+            />
+    </eightbitlab.com.blurview.BlurView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="150dp"
+        android:id="@+id/RelVidView"
+        android:layout_centerHorizontal="true"
+        app:lottie_rawRes="@raw/videoloading"
+        app:lottie_loop="true">
+    </com.airbnb.lottie.LottieAnimationView>
+
+    <FrameLayout
+        android:id="@+id/VideoHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="130dp"
+        android:id="@+id/cardViewProfile"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/strokeimageviewwhite">
+        <ImageView
+            android:id="@+id/uPictureIv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/strokeimageviewwhite"
+            android:src="@drawable/ic_person_grey"
+            android:scaleType="centerCrop"/>
+    </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:layout_below="@id/cardViewProfile"
+            android:id="@+id/loveCardView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_love"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@color/colorwhite"
+            android:scaleType="centerCrop" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="likes"
+        android:textColor="@android:color/white"
+        android:id="@+id/LikesInNNumber"
+        android:layout_below="@id/loveCardView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"/>
+
+        <ImageView
+            android:background="@drawable/infopost"
+            android:backgroundTint="@null"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_comment"
+            android:text="12.5k"
+            android:textSize="10sp"
+            android:layout_below="@id/LikesInNNumber"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/Comment"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textColor="@android:color/white"
+        android:id="@+id/CommentsInNNumber"
+        android:layout_below="@id/Comment"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="12dp"/>
+
+    <ImageView
+        android:id="@+id/Share"
+        android:layout_below="@id/CommentsInNNumber"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_share"
+        android:background="@null"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shares"
+        android:textColor="@android:color/white"
+        android:id="@+id/SharesInNNumber"
+        android:layout_below="@id/Share"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="12dp"/>
+
+
+    <ImageView
+        android:layout_below="@id/SharesInNNumber"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:background="@drawable/circle"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SharesInNNumber"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="43dp"
+        android:layout_marginRight="13dp"
+        app:cardCornerRadius="20dp">
+
+        <ImageView
+            android:id="@+id/albumCover"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:background="@android:color/black"/>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textColor="@color/colorwhite"
+        android:textStyle="bold"
+        android:text="name"
+        android:layout_below="@id/SharesInNNumber"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/uNameTv"/>
+    <com.borjabravo.readmoretextview.ReadMoreTextView
+        android:layout_below="@+id/uNameTv"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="13dp"
+        android:text="Title"
+        android:textColor="@color/colorwhite"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/pTitleTv"
+        app:trimExpandedText="see more"
+        app:trimCollapsedText="see less"
+        app:trimMode="trimModeLength"
+        app:trimLength="200"
+        app:colorClickableText="@color/colorBlue"
+        />
+</RelativeLayout>

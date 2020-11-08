@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "735182549694",
+    "firebase_url": "https://drop-dart.firebaseio.com",
+    "project_id": "drop-dart",
+    "storage_bucket": "drop-dart.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:735182549694:android:83b7620f611cc6eaba64ef",
+        "android_client_info": {
+          "package_name": "com.example.dropdart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "735182549694-978ad7anf5bithnsdhivj8ubuijepcta.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dropdart",
+            "certificate_hash": "1737fc215b6b37933481173db62911348a11f804"
+          }
+        },
+        {
+          "client_id": "735182549694-82s59qgq1g62ohof0r24du0gbp3a5o8n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-gli-Z-kpQpwUxsx43SZXuGJdjLDUVSk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "735182549694-82s59qgq1g62ohof0r24du0gbp3a5o8n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

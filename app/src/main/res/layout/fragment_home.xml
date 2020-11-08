@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment"
+    android:background="@android:color/black">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/lottie_anim"
+            app:lottie_rawRes="@raw/loading_dashboard"
+            android:background="@null"
+            android:visibility="gone"
+            app:lottie_loop="true"
+            />
+
+        <!-- TODO: Update blank fragment layout -->
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeTORefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.example.dropdart.recyclerview.postsRecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/postsRecyclerView"
+                android:orientation="vertical" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

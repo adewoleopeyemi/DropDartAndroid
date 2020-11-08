@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_profile_back"
+        android:state_checked="false" />
+    <item android:icon="@drawable/ic_profile_back_blue"
+        android:state_checked="true"/>
+</selector>

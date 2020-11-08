@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@android:color/black">
+
+
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/colorwhite"></FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/noInternetRelLayout"
+        android:visibility="gone"
+        android:background="@android:color/black">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oops internet connection lost!!!"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/NoInternetTv"/>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_anim_no_internet_connection"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:lottie_rawRes="@raw/nointernetconnection"
+            android:background="@color/colorBlack"
+            app:lottie_loop="true"
+            android:layout_below="@id/NoInternetTv"/>
+    </RelativeLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_anim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_rawRes="@raw/loading_dashboard"
+        android:background="@color/colorBlack"
+        android:visibility="gone"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@color/colorBlack"
+            app:menu="@menu/menu_nav"
+            app:itemIconTint="@color/colorwhite"></com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

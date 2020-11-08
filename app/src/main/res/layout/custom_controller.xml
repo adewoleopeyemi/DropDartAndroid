@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/black">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/exo_position"
+                android:textColor="@android:color/white"/>
+            <com.google.android.exoplayer2.ui.DefaultTimeBar
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/exo_progress"
+                android:layout_marginTop="8dp"
+                app:unplayed_color="@color/colorBlack"
+                app:buffered_color="@color/colorBlack"
+                app:played_color="@color/colorwhite"
+                android:layout_marginBottom="5dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
